@@ -36,7 +36,7 @@ node-js-scrypt
     * min: Math.pow(2,8) - 256
     * max: Math.pow(2,64) - 18446744073709552000
     * Math.pow(2,14) - the scrypt paper's suggestion for interactive logins
-    * Math.pow(2,20) - scrypt paper suggestion for fulesystem encryption
+    * Math.pow(2,20) - the scrypt paper's suggestion for filesystem encryption
   * `blockSize` (Integer, optional) - (r) blocksize to use
     * default: 8
     * min: 1
