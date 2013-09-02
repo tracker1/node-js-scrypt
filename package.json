@@ -1,0 +1,37 @@
+{
+  "name": "js-scrypt",
+  "version": "0.1.1",
+  "description": "JS Implementation of SCrypt for use with NodeJS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tracker1/node-js-scrypt.git"
+  },
+  "keywords": [
+    "scrypt",
+    "password",
+    "auth",
+    "authentication",
+    "encryption",
+    "crypto"
+  ],
+  "author": "Michael J. Ryan <tracker1@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/tracker1/node-js-scrypt/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.1",
+    "chai": "~1.7.2",
+    "coffee-script": "~1.6.3"
+  },
+  "dependencies": {
+    "generic-pool": "~2.0.4"
+  }
+}
