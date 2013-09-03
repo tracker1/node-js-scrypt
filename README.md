@@ -5,7 +5,7 @@ node-js-scrypt
 
 ## Installation
 
- * npm install (coming soon)
+ * npm install js-scrypt
  * clone the repository into your node_modules directory
 
 ## Usage
