@@ -1,6 +1,6 @@
 {
   "name": "js-scrypt",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "JS Implementation of SCrypt for use with NodeJS",
   "main": "index.js",
   "directories": {
