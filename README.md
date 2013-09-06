@@ -2,11 +2,13 @@ node-js-scrypt
 ==============
 
 [JS Implementation of SCrypt](https://github.com/tonyg/js-scrypt) wrapped in a module for node.js consumption.
+There are no compiled dependencies for this module.  It returned the computed bytes as a Buffer, not the Scrypt Hash Format (`c2NyeXB0`) string with included metadata.
+
 
 ## Installation
 
- * npm install js-scrypt
- * clone the repository into your node_modules directory
+    npm install js-scrypt
+
 
 ## Usage
 
@@ -28,29 +30,34 @@ node-js-scrypt
    * String will be encoded to bytes as UTF-8.
    * Buffer will be encoded as-is.
  * `options` (Object, optional)
-  * `maxmem` (Integer, optional) - the total memory available for scrypt in megabytes
-    * default: 32
-    * allowed values are (4,8,16,32,64,128,256,512,1024,2048)
-  * `cost` (Integer, optional) - (N) must be a power of two, will set the overall difficulty of the computation.
-    * default: 16384 - Math.pow(2,14)
-    * min: Math.pow(2,8) - 256
-    * max: Math.pow(2,64) - 18446744073709552000
-    * Math.pow(2,14) - the scrypt paper's suggestion for interactive logins
-    * Math.pow(2,20) - the scrypt paper's suggestion for filesystem encryption
-  * `blockSize` (Integer, optional) - (r) blocksize to use
-    * default: 8
-    * min: 1
-    * max: 256
-  * `parallel` (Integer, optional) - (p) parallelization factor
-    * default: 1 (given the runtime environment, it is probably best to leave this as-is)
-    * min: 1
-    * max: 256
-  * `size` (Integer, optional) - (L) length of result (number of bytes to generate)
-    * default: 64 (this is a 512bit result, which is plenty for general password usage)
-    * min: 1
-    * max: 2048
-  * callback (Function) - function(err, resultBuffer)
+   * `maxmem` (Integer, optional) - the total memory available for scrypt in megabytes
+     * default: 32
+     * allowed values are (4,8,16,32,64,128,256,512,1024,2048)
+   * `cost` (Integer, optional) - (N) must be a power of two, will set the overall difficulty of the computation.
+     * default: 16384 - Math.pow(2,14)
+     * min: Math.pow(2,8) - 256
+     * max: Math.pow(2,64) - 18446744073709552000
+     * Math.pow(2,14) - the scrypt paper's suggestion for interactive logins
+     * Math.pow(2,20) - the scrypt paper's suggestion for filesystem encryption
+   * `blockSize` (Integer, optional) - (r) blocksize to use
+     * default: 8
+     * min: 1
+     * max: 256
+   * `parallel` (Integer, optional) - (p) parallelization factor
+     * default: 1 (given the runtime environment, it is probably best to leave this as-is)
+     * min: 1
+     * max: 256
+   * `size` (Integer, optional) - (L) length of result (number of bytes to generate)
+     * default: 64 (this is a 512bit result, which is plenty for general password usage)
+     * min: 1
+     * max: 2048
+ * `callback` (Function) - function(err, resultBuffer)
 
+
+## TODO
+
+ * Create method(s) to simulate time/memory computation of Nrp vectors which will return a `c2NyeXB0` Scrypt Hash Format string.
+ 
 
 ## License
 
