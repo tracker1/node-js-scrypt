@@ -14,7 +14,9 @@
     "url": "git://github.com/tracker1/node-js-scrypt.git"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "http://registry.npmjs.org/",
+    "proxy":null,
+    "https-proxy":null
   },
   "keywords": [
     "scrypt",
